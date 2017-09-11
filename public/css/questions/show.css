@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+.title {
+  padding: 30px;
+}
+
+.answer {
+  background-color: #efefef;
+  padding: 10px;
+  margin: 15px;
+}
+
+.home {
+  font-size: 10px;
+}
+
+.questionlist {
+  font-size: 10px;
+}

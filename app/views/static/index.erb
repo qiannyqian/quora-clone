@@ -6,9 +6,19 @@
   <h2>Quora 0.2</h2>
 </div>
 
-<div class="introduction">
-  <p>Ask away and ye shall find out!</p>
-  <!-- <button type="button" name="button">Ask A Question</button> -->
+<div class="askquestion">
+  <form class="" action="/questions/ask" method="post">
+    <p>Ask A Question!</p>
+    <input type="question" name="question[question]" value="">
+    <br>
+    <input type="submit" value="Submit My Question">
+  </form>
+</div>
+
+<div class="questionlist">
+  <a href="/questions">
+    <h3>List of all questions</h3>
+  </a>
 </div>
 
 <div class="signup">

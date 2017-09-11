@@ -1,0 +1,27 @@
+<head>
+  <link rel="stylesheet" href="/css/questions/all.css">
+</head>
+
+<div class="title">
+  <h2>All Questions</h2>
+</div>
+
+<div class="askquestion">
+  <form class="" action="/questions/ask" method="post">
+    <p>Ask A Question!</p>
+    <input type="question" name="question[question]" value="">
+    <br>
+    <input type="submit" value="Submit My Question">
+  </form>
+</div>
+
+<div class="question_list">
+  <% Question.all.each do |asked| %>
+    <a href="/questions/<%= asked.id %>">
+      <p><%= asked.question %></p>
+    </a>
+    <br>
+  <% end %>
+</div>
+
+<a href="/">Return home</a>

@@ -1,0 +1,44 @@
+<head>
+  <link rel="stylesheet" href="/css/questions/show.css">
+</head>
+
+<div class="title">
+  <h1>
+    <%= @question.question %>
+  </h1>
+</div>
+
+<div class="answer-container">
+
+  <div class="answer_question">
+    <form class="" action="/questions/answer" method="post">
+      <p>Give An Answer!</p>
+      <input type="answer" name="answer[answer]" value="">
+      <br>
+      <% byebug%>
+      <input type="hidden" name="answer[user_id]" value="<%= current_user.id%>">
+      <br>
+      <input type="hidden" name="answer[question_id]" value="<%= @question.id %>">
+      <input type="submit" value="Submit My Answer">
+    </form>
+  </div>
+
+  <% @question.answers.each do |reply| %>
+    <div class="answer">
+      <p><%= reply.answer %></p>
+    </div>
+  <% end %>
+
+</div>
+
+<div class="home">
+  <a href="/">Return home</a>
+</div>
+
+<br>
+
+<div class="questionlist">
+  <a href="/questions">
+    <p>Back to all questions</p>
+  </a>
+</div>
